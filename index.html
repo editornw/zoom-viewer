@@ -2,20 +2,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Zoom Viewer</title>
-    <script src="https://openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Autumn Zoom Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
     <style>
-      body, html {
+      html, body {
         margin: 0;
         padding: 0;
-        background-color: #000;
-        height: 100%;
+        background: #000;
         width: 100%;
+        height: 100%;
       }
       #openseadragon {
-        height: 100vh;
         width: 100vw;
+        height: 100vh;
       }
     </style>
   </head>
@@ -25,10 +25,7 @@
       OpenSeadragon({
         id: "openseadragon",
         prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
-        tileSources: {
-          type: 'image',
-          url: 'https://drive.google.com/uc?export=download&id=1aWABolw62u4Tw4Y8C-HIicN7WLext1E3'
-        }
+        tileSources: "autumn_dzi.dzi"
       });
     </script>
   </body>
