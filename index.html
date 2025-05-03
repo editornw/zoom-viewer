@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Zoomable Artwork Gallery</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+    }
+    #search {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: 80%;
+      max-width: 400px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    li {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Zoomable Artwork Gallery</h1>
+  <input type="text" id="search" placeholder="Search artworks...">
+  <ul id="gallery">
+    <li><a href="autumn/" target="_blank">Autumn</a></li><li><a href="bird/" target="_blank">Bird</a></li><li><a href="blue_bird/" target="_blank">Blue Bird</a></li><li><a href="blue_vase/" target="_blank">Blue Vase</a></li><li><a href="flower/" target="_blank">Flower</a></li><li><a href="peacock/" target="_blank">Peacock</a></li><li><a href="red_mountain/" target="_blank">Red Mountain</a></li><li><a href="vase/" target="_blank">Vase</a></li>
+  </ul>
+
+  <script>
+    const input = document.getElementById('search');
+    const items = document.querySelectorAll('#gallery li');
+    input.addEventListener('input', () => {
+      const value = input.value.toLowerCase();
+      items.forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(value) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
