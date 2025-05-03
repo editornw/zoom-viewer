@@ -2,21 +2,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Autumn</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
   <style>
-    html, body { margin: 0; padding: 0; height: 100%; background: #000; }
-    #openseadragon { width: 100vw; height: 100vh; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+    }
+    #openseadragon {
+      width: 100vw;
+      height: 100vh;
+    }
+    #back {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+      font-size: 1rem;
+      background: rgba(0,0,0,0.5);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+    }
+    #back a {
+      color: white;
+      text-decoration: none;
+      font-family: sans-serif;
+    }
   </style>
 </head>
 <body>
+  <div id="back"><a href="../">&larr; Back to Gallery</a></div>
   <div id="openseadragon"></div>
   <script>
     OpenSeadragon({
       id: "openseadragon",
       prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
-      tileSources: "autumn.dzi"
+      tileSources: "autumn_dzi.dzi"
     });
   </script>
 </body>
